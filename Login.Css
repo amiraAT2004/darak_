@@ -1,0 +1,338 @@
+
+/* تنسيق القسم الرئيسي */
+.login-main {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-section) 5%;
+  background-color: var(--background-light);
+}
+
+.login-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-3);
+  min-height: 600px;
+}
+
+/* الجزء الأيمن (نموذج التسجيل) */
+.login-left {
+  flex: 1;
+  padding: 60px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-content {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-content h1 {
+  color: var(--primary-color);
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.login-subtitle {
+  color: var(--muted);
+  margin-bottom: 40px;
+  font-size: 1.1em;
+  text-align: right;
+}
+
+/* نموذج التسجيل */
+.login-form {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 18px; /* تصغير المسافة بين الحقول */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px; /* تصغير حجم التسمية */
+  color: var(--text-dark);
+  font-weight: 600;
+  text-align: right;
+  font-size: 0.95em; /* تصغير حجم الخط للتسمية */
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  right: 12px; /* تقريب الأيقونة أكثر */
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent-color);
+  font-size: 1em; /* تصغير حجم الأيقونة */
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 10px 40px 10px 12px; /* تصغير padding للحقول */
+  border: 2px solid var(--divider);
+  border-radius: 8px;
+  font-size: 14px; /* تصغير حجم خط الحقول */
+  font-family: 'Cairo', sans-serif;
+  transition: border-color 0.3s ease;
+  background-color: var(--background-light);
+  text-align: right;
+  height: 42px; /* تحديد ارتفاع أصغر للحقول */
+}
+
+.input-with-icon input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+/* خيارات النموذج */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* تصغير المسافة */
+  font-size: 0.9em; /* تصغير حجم الخط */
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.checkbox-container input {
+  display: none;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--divider);
+  border-radius: 4px;
+  margin-left: 6px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.forgot-password {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* زر تسجيل الدخول */
+.btn-login {
+  padding: 12px; /* تصغير padding للزر */
+  font-size: 1em; /* تصغير حجم خط الزر */
+  font-weight: 700;
+  margin-top: 10px;
+  width: 100%;
+  height: 45px; /* ارتفاع محدد للزر */
+}
+
+/* رابط التسجيل */
+.register-link {
+  margin-top: 25px; /* تصغير المسافة */
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95em; /* تصغير حجم الخط */
+}
+
+.register-link a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* الجزء الأيمن (الصورة) */
+.login-right {
+  flex: 1;
+  background-color: var(--primary-color);
+  background-image: url('Image/hero-section.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* طبقة شبه شفافة فوق الصورة */
+.login-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+}
+
+/* محتوى فوق الصورة */
+.login-info {
+  position: relative;
+  z-index: 2;
+  padding: 60px 50px;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-info h2 {
+  color: white;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.info-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  text-align: right;
+}
+
+.info-description {
+  font-size: 1em;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  text-align: right;
+}
+
+/* الميزات */
+.info-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature i {
+  font-size: 1.5em;
+  color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature span {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+
+
+  /* التصميم المتجاوب (Responsive Design) */
+
+
+@media (max-width: 1100px) {
+  .login-container {
+    flex-direction: column;
+    max-width: 600px;
+
+  }
+  .login-info {
+    align-items: center;
+    text-align-last: center;
+  }
+  .login-left, .login-right {
+    padding: 40px 30px;
+  }
+  
+  .login-right {
+    order: -1;
+    max-height: 600px;
+  }
+  
+  .login-info h2 {
+    font-size: 1.8em;
+  }
+  
+  .info-features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .feature {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+}
+/* للهواتف الصغيرة (أقل من 600 بكسل) */
+@media (max-width: 600px) {
+  .login-left {
+    padding: 30px 20px;
+  }
+  .login-right {
+    padding: 30px 20px;
+    height: px;
+  }
+  .login-content h1 {
+    font-size: 2em;
+  }
+  
+  .login-info h2 {
+    font-size: 1.6em;
+  }
+
+  .info-features {
+    font-size: 13px;
+  } 
+  
+}

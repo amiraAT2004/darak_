@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إضافة عقار - دارك | نظام إدارة وعرض المساكن في طرابلس</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="add-property.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="Image/favicon.ico" />
+  </head>
+  <body>
+    <!-- الهيدر -->
+    <header class="main-header">
+      <div class="brand-wrap">
+        <button
+          class="nav-toggle"
+          aria-label="فتح القائمة"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="#" class="logo">
+          <img
+            src="Image/logoDarak-01.png"
+            alt="شعار دارك"
+            class="header-logo"
+          />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="properties.html">العقارات</a>
+        <a href="add-property.html" class="active">إضافة عقار</a>
+        <a
+          class="contact-btn"
+          href="https://wa.me/218919842342text=مرحباً%20أرغب%20في%20المزيد%20من%20المعلومات%20حول%20منصة%20دارك"
+          target="_blank"
+          rel="noopener"
+        >
+          اتصل بنا (واتساب)
+        </a>
+      </nav>
+      <div class="auth-buttons">
+        <a href="signIn.html" class="btn btn-primary">تسجيل جديد</a>
+        <a href="Login.Html" class="btn btn-primary">تسجيل دخول</a>
+      </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main class="add-property-main">
+      <div class="container">
+        <!-- العنوان الرئيسي -->
+        <div class="page-header">
+          <h1><i class="fas fa-plus-circle"></i>إضافة عقار</h1>
+          <p class="page-subtitle">
+            املأ النموذج أدناه لإضافة عقار جديد للإيجار في منصة دارك
+          </p>
+        </div>
+
+        <!-- نموذج إضافة العقار -->
+        <form class="add-property-form" id="addPropertyForm">
+          <!-- قسم المعلومات الأساسية -->
+          <section class="form-section">
+            <h2 class="section-title">
+              <i class="fas fa-info-circle"></i> المعلومات الأساسية
+            </h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="property-title"
+                  >عنوان العقار <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="property-title"
+                  placeholder="مثال: شقة فاخرة للإيجار في حي الأندلس"
+                  required
+                />
+                <div class="form-hint">اكتب عنوانًا واضحًا وجذابًا للعقار</div>
+              </div>
+
+              <div class="form-group">
+                <label for="property-type"
+                  >نوع العقار <span class="required">*</span></label
+                >
+                <select id="property-type" required>
+                  <option value="">اختر نوع العقار</option>
+                  <option value="شقة">شقة</option>
+                  <option value="فيلا">فيلا</option>
+                  <option value="منزل">منزل</option>
+                  <option value="استوديو">استوديو</option>
+                  <option value="مكتب">مكتب</option>
+                  <option value="محل تجاري">محل تجاري</option>
+                  <option value="أرض">أرض</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="property-price"
+                  >السعر الشهري (دينار ليبي)
+                  <span class="required">*</span></label
+                >
+                <div class="price-input">
+                  <input
+                    type="number"
+                    id="property-price"
+                    min="0"
+                    placeholder="مثال: 1500"
+                    required
+                  />
+                  <span class="price-label">د.ل / شهرياً</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="property-area"
+                  >المساحة (م²) <span class="required">*</span></label
+                >
+                <input
+                  type="number"
+                  id="property-area"
+                  min="0"
+                  placeholder="مثال: 120"
+                  required
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- قسم الموقع -->
+          <section class="form-section">
+            <h2 class="section-title">
+              <i class="fas fa-map-marker-alt"></i> الموقع
+            </h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="property-city"
+                  >المدينة <span class="required">*</span></label
+                >
+                <select id="property-city" required>
+                  <option value="">اختر المدينة</option>
+                  <option value="طرابلس" selected>طرابلس</option>
+                  <option value="بنغازي">بنغازي</option>
+                  <option value="مصراتة">مصراتة</option>
+                  <option value="الزاوية">الزاوية</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="property-district"
+                  >المنطقة <span class="required">*</span></label
+                >
+                <select id="property-district" required>
+                  <option value="">اختر المنطقة</option>
+                  <option value="حي الأندلس">حي الأندلس</option>
+                  <option value="وسط المدينة">وسط المدينة</option>
+                  <option value="طريق المطار">طريق المطار</option>
+                  <option value="حي النصر">حي النصر</option>
+                  <option value="حي الزهور">حي الزهور</option>
+                  <option value="حي الفتح">حي الفتح</option>
+                  <option value="أخرى">منطقة أخرى</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="property-address"
+                  >العنوان التفصيلي <span class="required">*</span></label
+                >
+                <textarea
+                  id="property-address"
+                  rows="2"
+                  placeholder="الشارع، رقم المنزل، المعلم، أقرب نقطة دالة..."
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- قسم المواصفات -->
+          <section class="form-section">
+            <h2 class="section-title"><i class="fas fa-home"></i> المواصفات</h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="bedrooms"
+                  >عدد الغرف <span class="required">*</span></label
+                >
+                <select id="bedrooms" required>
+                  <option value="">اختر عدد الغرف</option>
+                  <option value="0">استوديو (بدون غرف)</option>
+                  <option value="1">1 غرفة</option>
+                  <option value="2">2 غرف</option>
+                  <option value="3">3 غرف</option>
+                  <option value="4">4 غرف</option>
+                  <option value="5">5 غرف أو أكثر</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="bathrooms"
+                  >عدد الحمامات <span class="required">*</span></label
+                >
+                <select id="bathrooms" required>
+                  <option value="">اختر عدد الحمامات</option>
+                  <option value="1">1 حمام</option>
+                  <option value="2">2 حمام</option>
+                  <option value="3">3 حمام</option>
+                  <option value="4">4 حمام أو أكثر</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="property-floor">الطابق</label>
+                <select id="property-floor">
+                  <option value="">اختر الطابق</option>
+                  <option value="-1">بدروم</option>
+                  <option value="0">أرضي</option>
+                  <option value="1">الأول</option>
+                  <option value="2">الثاني</option>
+                  <option value="3">الثالث</option>
+                  <option value="4+">الرابع فأعلى</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="furnished">التأثيث</label>
+                <select id="furnished">
+                  <option value="">حالة التأثيث</option>
+                  <option value="مفروش">مفروش بالكامل</option>
+                  <option value="نصف مفروش">نصف مفروش</option>
+                  <option value="غير مفروش">غير مفروش</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- الخدمات المتاحة -->
+            <div class="services-section">
+              <h3><i class="fas fa-cogs"></i> الخدمات المتاحة</h3>
+              <div class="services-grid">
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="موقف سيارات" />
+                  <span><i class="fas fa-parking"></i> موقف سيارات</span>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="مصعد" />
+                  <span><i class="fas fa-elevator"></i> مصعد</span>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="تكييف" />
+                  <span><i class="fas fa-wind"></i> تكييف</span>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="تدفئة" />
+                  <span><i class="fas fa-temperature-high"></i> تدفئة</span>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="انترنت" />
+                  <span><i class="fas fa-wifi"></i> انترنت</span>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="أمن" />
+                  <span><i class="fas fa-shield-alt"></i> أمن</span>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="حديقة" />
+                  <span><i class="fas fa-tree"></i> حديقة</span>
+                </label>
+                <label class="service-checkbox">
+                  <input type="checkbox" name="services" value="مسبح" />
+                  <span><i class="fas fa-swimming-pool"></i> مسبح</span>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <!-- قسم الوصف -->
+          <section class="form-section">
+            <h2 class="section-title">
+              <i class="fas fa-align-left"></i> الوصف التفصيلي
+            </h2>
+            <div class="form-group full-width">
+              <label for="property-description"
+                >وصف العقار <span class="required">*</span></label
+              >
+              <textarea
+                id="property-description"
+                rows="6"
+                placeholder="صف العقار بتفصيل، اذكر المميزات والإضافات، الحالة العامة، عمر العقار، الخدمات المتوفرة..."
+                required
+              ></textarea>
+              <div class="form-hint">
+                وصف مفصل يزيد من فرص إيجار العقار بسرعة
+              </div>
+            </div>
+          </section>
+
+          <!-- قسم الصور -->
+          <section class="form-section">
+            <h2 class="section-title"><i class="fas fa-images"></i> الصور</h2>
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label for="main-image"
+                  >الصورة الرئيسية <span class="required">*</span></label
+                >
+                <div class="file-upload">
+                  <input
+                    type="file"
+                    id="main-image"
+                    accept="image/*"
+                    required
+                  />
+                  <div class="upload-area">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>اسحب وأفلت الصورة هنا أو <span>اختر ملف</span></p>
+                    <p class="file-info">
+                      الصيغ المسموحة: JPG, PNG, WebP (الحد الأقصى: 5MB)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="gallery-images">صور إضافية</label>
+                <div class="file-upload">
+                  <input
+                    type="file"
+                    id="gallery-images"
+                    accept="image/*"
+                    multiple
+                  />
+                  <div class="upload-area">
+                    <i class="fas fa-images"></i>
+                    <p>اختر صور إضافية للعقار</p>
+                    <p class="file-info">
+                      يمكنك اختيار حتى 10 صور (الحد الأقصى: 5MB لكل صورة)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- قسم معلومات الاتصال -->
+          <section class="form-section">
+            <h2 class="section-title">
+              <i class="fas fa-address-book"></i> معلومات الاتصال
+            </h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="contact-name"
+                  >اسم المالك/المسؤول <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="contact-name"
+                  placeholder="اسم المالك أو المسؤول عن العقار"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone"
+                  >رقم الهاتف <span class="required">*</span></label
+                >
+                <input
+                  type="tel"
+                  id="contact-phone"
+                  placeholder="مثال: 0912345678"
+                  pattern="[0-9]{10}"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">البريد الإلكتروني</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  placeholder="example@domain.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-type">نوع العارض</label>
+                <select id="contact-type">
+                  <option value="مالك مباشر">مالك مباشر</option>
+                  <option value="وسيط عقاري">وسيط عقاري</option>
+                  <option value="شركة عقارية">شركة عقارية</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- قسم الشروط -->
+          <section class="form-section">
+            <h2 class="section-title">
+              <i class="fas fa-file-contract"></i> الشروط والأحكام
+            </h2>
+            <div class="terms-section">
+              <label class="terms-checkbox">
+                <input type="checkbox" id="terms-agreement" required />
+                <span
+                  >أوافق على
+                  <a href="#" target="_blank">الشروط والأحكام</a> للموقع
+                  <span class="required">*</span></span
+                >
+              </label>
+
+              <label class="terms-checkbox">
+                <input type="checkbox" id="privacy-agreement" required />
+                <span
+                  >أوافق على <a href="#" target="_blank">سياسة الخصوصية</a>
+                  <span class="required">*</span></span
+                >
+              </label>
+
+              <div class="form-hint">
+                <i class="fas fa-info-circle"></i>
+                بعد إرسال النموذج، سيتم مراجعة العقار من قبل إدارة الموقع قبل
+                نشره (خلال 24-48 ساعة)
+              </div>
+            </div>
+          </section>
+
+          <!-- أزرار الإرسال -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">
+              <i class="fas fa-plus-circle"></i> إضافة العقار
+            </button>
+            <button type="reset" class="btn btn-secondary">
+              <i class="fas fa-undo"></i> إعادة تعيين
+            </button>
+            <a href="properties.html" class="btn btn-outline">
+              <i class="fas fa-times"></i> إلغاء والعودة
+            </a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="main-footer" id="contact">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>دارك</h3>
+          <p>منصة عقارية رائدة في طرابلس، نسهل عملية البحث والتأجير والبيع.</p>
+        </div>
+        <div class="footer-col">
+          <h3>روابط سريعة</h3>
+          <ul>
+            <a href="Index.Html">الرئيسية</a>
+            <a href="properties.html">العقارات</a>
+            <a href="add-property.html" class="active">إضافة عقار</a>
+            
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>اتصل بنا</h3>
+          <p><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا</p>
+          <p><i class="fas fa-phone"></i> +218 91 234 5678</p>
+          <p><i class="fas fa-envelope"></i> info@darak.ly</p>
+        </div>
+        <div class="footer-col">
+          <h3>تابعنا</h3>
+          <p>
+                                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/?lang=ar" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2023 دارك. جميع الحقوق محفوظة.</p>
+      </div>
+    </footer>
+    <script src="java.js"></script>
+  </body>
+</html>

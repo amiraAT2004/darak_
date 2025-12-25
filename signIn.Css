@@ -1,0 +1,355 @@
+
+/* تنسيق القسم الرئيسي */
+.register-main {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-section) 5%;
+    background-color: var(--background-light);
+}
+
+.register-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-3);
+    min-height: 600px;
+}
+
+/* الجزء الأيمن (نموذج التسجيل) */
+.register-left {
+    flex: 1;
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-content {
+    width: 100%;
+    max-width: 400px;
+}
+
+.register-content h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.register-subtitle {
+    color: var(--muted);
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    text-align: right;
+}
+
+/* نموذج التسجيل */
+.register-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 600;
+    text-align: right;
+    font-size: 0.95em;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-color);
+    font-size: 1.2em;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 15px 50px 15px 15px;
+    border: 2px solid var(--divider);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    transition: border-color 0.3s ease;
+    background-color: var(--background-light);
+    text-align: right;
+    height: 50px;
+}
+
+.input-with-icon input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* خيارات النموذج */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--divider);
+    border-radius: 4px;
+    margin-left: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.terms-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* زر إنشاء حساب */
+.btn-register {
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+}
+
+/* رابط تسجيل الدخول */
+.login-link {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* الجزء الأيسر (معلومات إضافية) */
+.register-right {
+    flex: 1;
+  background-color: var(--primary-color);
+   background-image: url('Image/hero-section.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+
+
+.register-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+}
+
+.register-info {
+    max-width: 400px;
+    z-index: 2;
+}
+
+.register-info h2 {
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.info-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    text-align: right;
+}
+
+.info-description {
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    text-align: right;
+}
+
+/* الميزات */
+.info-features {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature i {
+    font-size: 1.8em;
+    color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature span {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+  /* التصميم المتجاوب لصفحة التسجيل */
+
+
+@media (max-width: 1100px) {
+    .register-container {
+        flex-direction: column;
+        max-width: 600px;
+    }
+    
+    .register-left, .register-right {
+        padding: 40px 30px;
+    }
+    
+    .register-right {
+        order: -1;
+        padding: 40px 30px;
+    }
+    
+    .register-info h2 {
+        font-size: 1.8em;
+    }
+    
+    .info-features {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .feature {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .feature i {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+        max-width: 500px;
+    }
+    
+    .register-left, .register-right {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .register-left, .register-right {
+        padding: 30px 20px;
+    }
+    
+    .register-content h1 {
+        font-size: 2em;
+    }
+    
+    .register-info h2 {
+        font-size: 1.6em;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .info-features {
+        flex-direction: column;
+    }
+    
+    .feature {
+        flex-direction: row;
+        text-align: right;
+        gap: 15px;
+    }
+}

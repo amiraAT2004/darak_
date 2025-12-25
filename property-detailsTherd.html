@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب إداري للإيجار - وسط المدينة | دارك</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="property-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Image/favicon.ico">
+</head>
+
+<body>
+    <!-- الهيدر -->
+    <header class="main-header">
+                   <div class="brand-wrap">
+            <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="logo">
+                <img src="Image/logoDarak-01.png" alt="شعار دارك" class="header-logo">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="Index.Html">الرئيسية</a>
+            <a href="properties.html">العقارات</a>
+            <a href="add-property.html" class="active">إضافة عقار</a>
+            <a class="contact-btn"
+                href="https://wa.me/218919842342text=مرحباً%20أرغب%20في%20المزيد%20من%20المعلومات%20حول%20منصة%20دارك"
+                target="_blank" rel="noopener">
+                اتصل بنا (واتساب)
+            </a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="signIn.html" class="btn btn-primary">تسجيل جديد</a>
+            <a href="login.html" class="btn btn-primary">تسجيل دخول</a>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main class="property-details-main">
+        <div class="container">
+            <!-- مسار التنقل -->
+            <nav class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <i class="fas fa-chevron-left"></i>
+                <a href="properties.html">العقارات</a>
+                <i class="fas fa-chevron-left"></i>
+                <span class="current">تفاصيل العقار</span>
+            </nav>
+
+            <!-- العنوان الرئيسي -->
+            <div class="property-header">
+                <h1 class="property-title">مكتب إداري للإيجار - وسط المدينة</h1>
+                <div class="property-meta">
+                    <span class="property-badge">للإيجار</span>
+                    <span class="property-id">رقم العقار: #PR-2024-081</span>
+                </div>
+            </div>
+
+            <!-- محتوى التفاصيل -->
+            <div class="property-details-content">
+                <!-- العمود الأيسر: الصور والمعلومات الأساسية -->
+                <div class="property-left-column">
+                    <!-- بطاقة الصورة الرئيسية مع السعر -->
+                    <div class="main-image-card">
+                        <!-- الصورة الرئيسية -->
+                        <div class="main-image-container">
+                            <img src="Image/OFFIC1.jpg" alt="مكتب إداري للإيجار في وسط المدينة"
+                                class="main-property-image">
+                            <div class="image-overlay">
+
+                            </div>
+                        </div>
+
+                        <!-- السعر والإجراءات في نفس البطاقة -->
+                        <div class="price-action-section">
+                            <div class="price-info">
+                                <div class="price-header">
+                                    <h3>السعر</h3>
+                                    <span class="price-badge">شهري</span>
+                                </div>
+                                <div class="price-value">1,800 <span>د.ل</span></div>
+                                <p class="price-note">السعر شامل خدمات الإنترنت والصيانة الأساسية.</p>
+                            </div>
+
+                            <div class="action-buttons">
+                                <!-- زر الاتصال -->
+                                <a href="login.html" class="btn-contact-owner">
+                                    <i class="fas fa-phone-alt"></i> الاتصال بالمعلن
+                                </a>
+
+
+                                <!-- زر المراسلة -->
+                                <a href="login.html" class="btn-send-message">
+                                    <i class="fas fa-envelope"></i> إرسال رسالة
+                                </a>
+                            </div>
+
+                            <!-- معلومات الاتصال (مخفية بشكل افتراضي) -->
+                            <div class="contact-info">
+                                <h4>معلومات الاتصال:</h4>
+                                <p><i class="fas fa-user"></i> قسم التأجير - دارك</p>
+                                <p><i class="fas fa-phone"></i> +218 91 234 5678</p>
+                                <p><i class="fas fa-envelope"></i> info@darak.ly</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الصور المصغرة -->
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active">
+                            <img src="Image/OFFIC1.jpg" alt="الصورة الرئيسية" >
+                        </div>
+
+                    </div>
+
+                    <!-- المواصفات الأساسية -->
+                    <div class="basic-specs">
+                        <h2 class="section-title">المواصفات الأساسية</h2>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <div class="spec-info">
+                                    <span class="spec-label">المساحة</span>
+                                    <span class="spec-value">80 م²</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-briefcase"></i>
+                                <div class="spec-info">
+                                    <span class="spec-label">عدد المكاتب</span>
+                                    <span class="spec-value">4 مكاتب</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-bath"></i>
+                                <div class="spec-info">
+                                    <span class="spec-label">دورات المياه</span>
+                                    <span class="spec-value">1</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-building"></i>
+                                <div class="spec-info">
+                                    <span class="spec-label">الطوابق</span>
+                                    <span class="spec-value">طابقين</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-car"></i>
+                                <div class="spec-info">
+                                    <span class="spec-label">مواقف السيارات</span>
+                                    <span class="spec-value">متاح</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div class="spec-info">
+                                    <span class="spec-label">سنة البناء</span>
+                                    <span class="spec-value">2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الوصف التفصيلي -->
+                    <div class="property-description">
+                        <h2 class="section-title">الوصف التفصيلي</h2>
+                        <p>
+                            مكتب إداري فاخر في وسط المدينة، مجهز بالكامل ومناسب للشركات والمؤسسات.
+                            تصميم عملي يوفر بيئة عمل مريحة مع إضاءة طبيعية وإطلالة مميزة.
+                        </p>
+                        <p>
+                            يقع المكتب في موقع حيوي قريب من المصارف والمطاعم والخدمات، مع سهولة الوصول ووجود مواقف
+                            قريبة.
+                        </p>
+                        <h3>المميزات الإضافية:</h3>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check-circle"></i> إنترنت عالي السرعة</li>
+                            <li><i class="fas fa-check-circle"></i> تكييف وتدفئة</li>
+                            <li><i class="fas fa-check-circle"></i> قاعة اجتماع صغيرة</li>
+                            <li><i class="fas fa-check-circle"></i> مكتب استقبال</li>
+                            <li><i class="fas fa-check-circle"></i> كاميرات مراقبة وأمان</li>
+                            <li><i class="fas fa-check-circle"></i> قريب من الخدمات</li>
+                        </ul>
+                    </div>
+
+                    <!-- الموقع مع خرائط جوجل -->
+                    <div class="property-location">
+                        <h2 class="section-title">الموقع</h2>
+                        <div class="location-info">
+                            <p><i class="fas fa-map-marker-alt"></i> وسط المدينة، طرابلس - ليبيا</p>
+                            <p><i class="fas fa-directions"></i> قريب من المصارف والمطاعم والخدمات العامة</p>
+                            <button class="btn-get-directions">
+                                <i class="fas fa-route"></i> الحصول على اتجاهات
+                            </button>
+                        </div>
+
+                        <!-- خريطة جوجل باستخدام iframe -->
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.232714880191!2d13.179282515385024!3d32.55884530682097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a091d9b5c5b5c5%3A0x5c9c9c9c9c9c9c9c!2sTripoli%2C%20Libya!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
+                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" class="google-map">
+                            </iframe>
+                          
+                        </div>
+
+                        <!-- معلومات النقاط القريبة -->
+                        <div class="nearby-places">
+                            <h3>الأماكن القريبة:</h3>
+                            <div class="places-list">
+                                <div class="place-item">
+                                    <i class="fas fa-hospital"></i>
+                                    <span>مركز طبي (700 م)</span>
+                                </div>
+                                <div class="place-item">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>مصرف / صراف آلي (200 م)</span>
+                                </div>
+                                <div class="place-item">
+                                    <i class="fas fa-school"></i>
+                                    <span>موقف سيارات عام (150 م)</span>
+                                </div>
+                                <div class="place-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>مطاعم ومقاهي (300 م)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- العمود الأيمن: معلومات المالك والإجراءات -->
+                <div class="property-right-column">
+                    <!-- معلومات المالك -->
+                    <div class="owner-card">
+                        <div class="owner-header">
+                            <h3>المالك / الوسيط</h3>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> موثّق</span>
+                        </div>
+                        <div class="owner-info">
+                            <div class="owner-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="owner-details">
+                                <h4>دارك - قسم التأجير</h4>
+                                <p class="owner-type">وسيط عقاري</p>
+                                <p class="member-since">عضو منذ: يناير 2022</p>
+                            </div>
+                        </div>
+                        <div class="owner-stats">
+                            <div class="stat">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">عقار معروض</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">24</span>
+                                <span class="stat-label">رد سريع</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- معلومات سريعة -->
+                    <div class="quick-info-card">
+                        <h3>معلومات سريعة</h3>
+                        <div class="info-item">
+                            <span class="info-label">تاريخ الإضافة:</span>
+                            <span class="info-value">15 مارس 2024</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">آخر تحديث:</span>
+                            <span class="info-value">22 مارس 2024</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">المشاهدات:</span>
+                            <span class="info-value">1,248 مشاهدة</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">الحالة:</span>
+                            <span class="info-value available">متاح</span>
+                        </div>
+                    </div>
+
+                    <!-- مشاركة العقار -->
+                    <div class="share-card">
+                        <h3>مشاركة العقار</h3>
+                        <p>شارك هذا العقار مع أصدقائك</p>
+
+                        <div class="share-buttons">
+                            <!-- فيسبوك -->
+                            <a class="share-btn facebook"
+                                href="https://www.facebook.com/sharer/sharer.php?u=https://example.com/property-details.html"
+                                target="_blank" rel="noopener">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+
+                            <!-- تويتر (X) -->
+                            <a class="share-btn twitter"
+                                href="https://twitter.com/intent/tweet?url=https://example.com/property-details.html&text=شوف%20هذا%20العقار"
+                                target="_blank" rel="noopener">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+
+                            <!-- واتساب -->
+                            <a class="share-btn whatsapp"
+                                href="https://wa.me/?text=شوف%20هذا%20العقار%20https://example.com/property-details.html"
+                                target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+
+                            <!-- نسخ الرابط -->
+                            <a class="share-btn link" href="#"
+                                onclick="navigator.clipboard.writeText(window.location.href); alert('تم نسخ رابط العقار'); return false;">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="main-footer" id=contact>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>دارك</h3>
+                <p>منصة عقارية رائدة في طرابلس، نسهل عملية البحث والتأجير والبيع.</p>
+            </div>
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <a href="Index.Html">الرئيسية</a>
+                    <a href="properties.html">العقارات</a>
+                    <a href="add-property.html" class="active">إضافة عقار</a>
+                    
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>اتصل بنا</h3>
+                <p><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا</p>
+                <p><i class="fas fa-phone"></i> +218 91 234 5678</p>
+                <p><i class="fas fa-envelope"></i> info@darak.ly</p>
+            </div>
+            <div class="footer-col">
+                <h3>تابعنا</h3>
+                <p>
+                                   <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/?lang=ar" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 دارك. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script src="java.js"></script>
+    <script src="pic.js"></script>
+</body>
+
+</html>
