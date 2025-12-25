@@ -1,165 +1,201 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>دارك - نظام إدارة وعرض المساكن في طرابلس</title>
-     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- الهيدر -->
 
-    
     <header class="main-header">
-        <!-- ✅ في الرسبونسف: الهامبرجر + الشعار جنب بعض -->
-        <div class="brand-wrap">
-            <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
+      <!-- ✅ في الرسبونسف: الهامبرجر + الشعار جنب بعض -->
+      <div class="brand-wrap">
+        <button
+          class="nav-toggle"
+          aria-label="فتح القائمة"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
 
-            <a href="#" class="logo">
-                <img src="Image/logoDarak-01.png" alt="شعار دارك" class="header-logo">
-            </a>
-        </div>
+        <a href="#" class="logo">
+          <img
+            src="Image/logoDarak-01.png"
+            alt="شعار دارك"
+            class="header-logo"
+          />
+        </a>
+      </div>
 
-        <nav class="nav-links">
-             <a href="index.html">الرئيسية</a>
-            <a href="properties.html">العقارات</a>
-            <a href="add-property.html" class="active">إضافة عقار</a>
-           <a class="contact-btn" 
-   href="https://wa.me/218919842342text=مرحباً%20أرغب%20في%20المزيد%20من%20المعلومات%20حول%20منصة%20دارك"
-   target="_blank" rel="noopener">
-  اتصل بنا (واتساب)
-</a>
-
-        </nav>
-        <!-- ✅ في الرسبونسف: أزرار التسجيل تكون على اليسار -->
-        <div class="auth-buttons">
-            <a href="signIn.html" class="btn btn-primary">تسجيل جديد</a>
-            <a href="Login.Html" class="btn btn-primary">تسجيل دخول</a>
-        </div>
+      <nav class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="properties.html">العقارات</a>
+        <a href="add-property.html" class="active">إضافة عقار</a>
+        <a
+          class="contact-btn"
+          href="https://wa.me/218919842342text=مرحباً%20أرغب%20في%20المزيد%20من%20المعلومات%20حول%20منصة%20دارك"
+          target="_blank"
+          rel="noopener"
+        >
+          اتصل بنا (واتساب)
+        </a>
+      </nav>
+      <!-- ✅ في الرسبونسف: أزرار التسجيل تكون على اليسار -->
+      <div class="auth-buttons">
+        <a href="signIn.html" class="btn btn-primary">تسجيل جديد</a>
+        <a href="Login.Html" class="btn btn-primary">تسجيل دخول</a>
+      </div>
     </header>
 
     <!-- القسم الرئيسي -->
     <main>
-        <!-- قسم البطل -->
-        <section class="hero-section" id="home">
-            <div class="hero-content">
-                <h1>ابحث عن مسكنك المثالي في طرابلس</h1>
-                <p>منصة دارك تتيح لك البحث عن عقارات للإيجار والبيع بسهولة وشفافية</p>
-                
-            </div>
-        </section>
+      <!-- قسم البطل -->
+      <section class="hero-section" id="home">
+        <div class="hero-content">
+          <h1>ابحث عن مسكنك المثالي في طرابلس</h1>
+          <p>منصة دارك تتيح لك البحث عن عقارات للإيجار والبيع بسهولة وشفافية</p>
+        </div>
+      </section>
 
-        <!-- قسم عن الموقع -->
-        <section class="about-section" id="about">
-            <h2>ماذا نقدم؟</h2>
-            <div class="about-content">
-                <p>نحن نربط بين الملاك والمستأجرين في طرابلس عبر منصة إلكترونية آمنة وسهلة الاستخدام، مع ضمان عرض واضح للعقارات وتفاصيلها.</p>
-                <div class="goals-grid">
-                    <div class="goal-item">
-                        <i class="fas fa-home"></i>
-                        <h4>عقارات متنوعة</h4>
-                        <p>شقق، فيلات، مكاتب، وأراضي.</p>
-                    </div>
-                    <div class="goal-item">
-                        <i class="fas fa-search"></i>
-                        <h4>بحث ذكي</h4>
-                        <p>بحث متقدم حسب الموقع والسعر والنوع.</p>
-                    </div>
-                    <div class="goal-item">
-                        <i class="fas fa-handshake"></i>
-                        <h4>تواصل مباشر</h4>
-                        <p>تواصل سريع بين الملاك والمستأجرين.</p>
-                    </div>
-                </div>
+      <!-- قسم عن الموقع -->
+      <section class="about-section" id="about">
+        <h2>ماذا نقدم؟</h2>
+        <div class="about-content">
+          <p>
+            نحن نربط بين الملاك والمستأجرين في طرابلس عبر منصة إلكترونية آمنة
+            وسهلة الاستخدام، مع ضمان عرض واضح للعقارات وتفاصيلها.
+          </p>
+          <div class="goals-grid">
+            <div class="goal-item">
+              <i class="fas fa-home"></i>
+              <h4>عقارات متنوعة</h4>
+              <p>شقق، فيلات، مكاتب، وأراضي.</p>
             </div>
-        </section>
+            <div class="goal-item">
+              <i class="fas fa-search"></i>
+              <h4>بحث ذكي</h4>
+              <p>بحث متقدم حسب الموقع والسعر والنوع.</p>
+            </div>
+            <div class="goal-item">
+              <i class="fas fa-handshake"></i>
+              <h4>تواصل مباشر</h4>
+              <p>تواصل سريع بين الملاك والمستأجرين.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- عقارات مميزة -->
-        <section class="featured-listings" id="properties">
-            <h2>عقارات مميزة</h2>
-            <p class="section-subtitle">أفضل العروض المختارة لك هذا الأسبوع</p>
-            <div class="listings-grid">
-               
+      <!-- عقارات مميزة -->
+      <section class="featured-listings" id="properties">
+        <h2>عقارات مميزة</h2>
+        <p class="section-subtitle">أفضل العروض المختارة لك هذا الأسبوع</p>
+        <div class="listings-grid">
+          <article class="listing-card">
+            <img src="Image/flat1.jpg" alt="شقة فاخرة" class="listing-image" />
+            <div class="listing-info">
+              <h4>شقة فاخرة للإيجار - حي الأندلس</h4>
+              <div class="details-row">
+                <span><i class="fas fa-ruler-combined"></i> 150 م²</span>
+                <span><i class="fas fa-bed"></i> 3 غرف</span>
+                <span><i class="fas fa-bath"></i> 2 حمام</span>
+              </div>
+              <div class="price">
+                <span class="price-value">2,500 د.ل</span> / شهرياً
+              </div>
+              <a href="property-details.html" class="btn btn-primary btn-block"
+                >عرض التفاصيل</a
+              >
+            </div>
+          </article>
 
-                <article class="listing-card">
-                    <img src="Image/flat1.jpg" alt="شقة فاخرة" class="listing-image">
-                    <div class="listing-info">
-                        <h4>شقة فاخرة للإيجار - حي الأندلس</h4>
-                        <div class="details-row">
-                            <span><i class="fas fa-ruler-combined"></i> 150 م²</span>
-                            <span><i class="fas fa-bed"></i> 3 غرف</span>
-                            <span><i class="fas fa-bath"></i> 2 حمام</span>
-                        </div>
-                        <div class="price">
-                            <span class="price-value">2,500 د.ل</span> / شهرياً
-                        </div>
-                        <a href="property-details.html" class="btn btn-primary btn-block">عرض التفاصيل</a>
-                    </div>
-                </article>
-               
-                <article class="listing-card">
-                    <img src="Image/OFFIC1.jpg" alt="مكتب إداري" class="listing-image">
-                    <div class="listing-info">
-                        <h4>مكتب إداري للإيجار - وسط المدينة</h4>
-                        <div class="details-row">
-                            <span><i class="fas fa-ruler-combined"></i> 80 م²</span>
-                            <span><i class="fas fa-building"></i> طابقين</span>
-                            <span><i class="fas fa-car"></i> موقف سيارات</span>
-                        </div>
-                        <div class="price">
-                            <span class="price-value">1,800 د.ل</span> / شهرياً
-                        </div>
-                        <a href="property-detailsTherd.html" class="btn btn-primary btn-block">عرض التفاصيل</a>
-                    </div>
-                </article>
+          <article class="listing-card">
+            <img
+              src="Image/OFFIC1.jpg"
+              alt="مكتب إداري"
+              class="listing-image"
+            />
+            <div class="listing-info">
+              <h4>مكتب إداري للإيجار - وسط المدينة</h4>
+              <div class="details-row">
+                <span><i class="fas fa-ruler-combined"></i> 80 م²</span>
+                <span><i class="fas fa-building"></i> طابقين</span>
+                <span><i class="fas fa-car"></i> موقف سيارات</span>
+              </div>
+              <div class="price">
+                <span class="price-value">1,800 د.ل</span> / شهرياً
+              </div>
+              <a
+                href="property-detailsTherd.html"
+                class="btn btn-primary btn-block"
+                >عرض التفاصيل</a
+              >
             </div>
-            <div class="view-all">
-                <a href="properties.html" class="btn btn-accent btn-large">عرض جميع العقارات <i class="fas fa-arrow-left"></i></a>
-            </div>
-        </section>
+          </article>
+        </div>
+        <div class="view-all">
+          <a href="properties.html" class="btn btn-accent btn-large"
+            >عرض جميع العقارات <i class="fas fa-arrow-left"></i
+          ></a>
+        </div>
+      </section>
     </main>
 
     <!-- الفوتر -->
     <footer class="main-footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>دارك</h3>
-                <p>منصة عقارية رائدة في طرابلس، نسهل عملية البحث والتأجير والبيع.</p>
-            </div>
-            <div class="footer-col">
-                <h3>روابط سريعة</h3>
-                <ul>
-                       <a href="index.html">الرئيسية</a>
-                       <a href="properties.html">العقارات</a>
-                        <a href="add-property.html" class="active">إضافة عقار</a>            
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>اتصل بنا</h3>
-                <p><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا</p>
-                <p><i class="fas fa-phone"></i> +218 91 234 5678</p>
-                <p><i class="fas fa-envelope"></i> info@darak.ly</p>
-            </div>
-            <div class="footer-col">
-                <h3>تابعنا</h3>
-                <p>
-                                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://x.com/?lang=ar" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                </p>
-            </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>دارك</h3>
+          <p>منصة عقارية رائدة في طرابلس، نسهل عملية البحث والتأجير والبيع.</p>
         </div>
-        <div class="footer-bottom">
-            <p>© 2023 دارك. جميع الحقوق محفوظة.</p>
+        <div class="footer-col">
+          <h3>روابط سريعة</h3>
+          <ul>
+            <a href="index.html">الرئيسية</a>
+            <a href="properties.html">العقارات</a>
+            <a href="add-property.html" class="active">إضافة عقار</a>
+          </ul>
         </div>
+        <div class="footer-col">
+          <h3>اتصل بنا</h3>
+          <p><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا</p>
+          <p><i class="fas fa-phone"></i> +218 91 234 5678</p>
+          <p><i class="fas fa-envelope"></i> info@darak.ly</p>
+        </div>
+        <div class="footer-col">
+          <h3>تابعنا</h3>
+          <p>
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://x.com/?lang=ar" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 دارك. جميع الحقوق محفوظة.</p>
+        <p>
+          عمل الطالبات: أميرة عبد السلام التائب _ ألاء امحمد مريود _ زينب علي
+          الشيخ
+        </p>
+      </div>
     </footer>
-  
-    <script src="java.js"></script> 
 
-</body>
+    <script src="java.js"></script>
+  </body>
 </html>
