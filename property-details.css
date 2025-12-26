@@ -249,34 +249,6 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* موجودة في HTML لكن مخفية افتراضيًا */
-.contact-info {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid var(--divider);
-  display: none;
-}
-
-.contact-info h4 {
-  color: var(--primary-color);
-  margin-bottom: 15px;
-  font-size: 1.1em;
-}
-
-.contact-info p {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.95em;
-  flex-wrap: wrap;
-}
-
-.contact-info i {
-  color: var(--accent-color);
-  width: 20px;
-}
-
 /* =========================
    Thumbnail Gallery
    ========================= */
