@@ -19,6 +19,8 @@
   --shadow-2: rgba(0, 0, 0, 0.2);
   --primary-gradient-start: rgba(0, 9, 103, 0.58);
   --primary-gradient-end: rgba(1, 16, 184, 0.277);
+    --error-color: #e53935;
+  --shadow-3: 0 10px 40px rgba(0,0,0,0.08);
 }
 
 /* إعادة ضبط المتصفح (Reset/Box Sizing) */
@@ -61,6 +63,7 @@ section {
   display: inline-block;
   transition: background-color 0.3s ease, transform 0.2s;
 }
+
 
 .btn-primary {
   background-color: var(--primary-color);
@@ -151,7 +154,7 @@ section {
 .nav-links {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); 
   display: flex;
   gap: 25px;
   align-items: center;
@@ -378,7 +381,7 @@ section {
   /* زر الهامبرجر: خلفية شفافة */
   .nav-toggle {
     display: block;
-    background: transparent;
+    background: transparent; 
     border: 0;
     color: var(--text-light);
     font-size: 28px;
@@ -414,15 +417,12 @@ section {
   position: absolute;
   top: 70px;              /* تحت الهيدر */
   right: 10px;            /*تثبيت على اليمين */
-  left: auto;             
+  left: auto;              
   transform: none;       
-
   width: 240px;
-
-  display: none;
+  display: none;     
   flex-direction: column;
   gap: 14px;
-
   padding: 22px;
   border-radius: 14px;
 
@@ -480,10 +480,8 @@ section {
   .footer-grid {
     grid-template-columns: 1fr;
   }
-
   .details-row {
     flex-direction: column;
-
   }
 
   .details-row span {

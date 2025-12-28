@@ -1,4 +1,3 @@
-
 /* تنسيق القسم الرئيسي */
 .register-main {
     min-height: calc(100vh - 200px);
@@ -111,39 +110,14 @@
     align-items: center;
     cursor: pointer;
     color: var(--text-dark);
+    gap: 5px;
 }
 
-.checkbox-container input {
-    display: none;
-}
+.checkbox-container input{
+    width: 18px;
+    height: 18px;
 
-.checkmark {
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--divider);
-    border-radius: 4px;
-    margin-left: 8px;
-    position: relative;
-    transition: all 0.3s ease;
 }
-
-.checkbox-container input:checked ~ .checkmark {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-.checkbox-container input:checked ~ .checkmark:after {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: 2px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
 .terms-link {
     color: var(--accent-color);
     text-decoration: none;
@@ -186,13 +160,13 @@
 /* الجزء الأيسر (معلومات إضافية) */
 .register-right {
     flex: 1;
-  background-color: var(--primary-color);
-   background-image: url('Image/hero-section.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
+    background-color: var(--primary-color);
+    background-image: url('Image/hero-section.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
     padding: 60px 50px;
     display: flex;
     align-items: center;
@@ -200,36 +174,50 @@
     color: white;
 }
 
-
-
-
 .register-right::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
 }
 
 .register-info {
     max-width: 400px;
     z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* شعار صفحة التسجيل */
+.register-logo {
+    max-width: 150px;
+    margin: 0 auto 30px;
+    display: block;
+    filter: brightness(0) invert(1); /* يجعل الشعار أبيض */
+    z-index: 3;
 }
 
 .register-info h2 {
     color: white;
     font-size: 2.2em;
     margin-bottom: 10px;
-    text-align: right;
+    text-align: center;
+    width: 100%;
 }
 
 .info-subtitle {
     font-size: 1.2em;
     margin-bottom: 20px;
     opacity: 0.9;
-    text-align: right;
+    text-align: center;
+    width: 100%;
 }
 
 .info-description {
@@ -237,7 +225,8 @@
     line-height: 1.8;
     margin-bottom: 40px;
     opacity: 0.9;
-    text-align: right;
+    text-align: center;
+    width: 100%;
 }
 
 /* الميزات */
@@ -245,12 +234,14 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+    width: 100%;
 }
 
 .feature {
     display: flex;
     align-items: center;
     gap: 15px;
+    justify-content: center;
 }
 
 .feature i {
@@ -270,9 +261,7 @@
     font-weight: 600;
 }
 
-
-  /* التصميم المتجاوب لصفحة التسجيل */
-
+/* التصميم المتجاوب لصفحة التسجيل */
 
 @media (max-width: 1100px) {
     .register-container {
@@ -287,10 +276,33 @@
     .register-right {
         order: -1;
         padding: 40px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+    }
+    
+    .register-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 500px;
+    }
+    
+    .register-logo {
+        max-width: 120px;
+        margin-bottom: 20px;
     }
     
     .register-info h2 {
         font-size: 1.8em;
+        text-align: center;
+    }
+    
+    .info-subtitle,
+    .info-description {
+        text-align: center;
     }
     
     .info-features {
@@ -313,20 +325,16 @@
     }
 }
 
-@media (max-width: 768px) {
-    .register-container {
-        flex-direction: column;
-        max-width: 500px;
-    }
-    
-    .register-left, .register-right {
-        padding: 30px 25px;
-    }
-}
-
 @media (max-width: 600px) {
     .register-left, .register-right {
         padding: 30px 20px;
+    }
+    
+    .register-right {
+        min-height: 250px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
     }
     
     .register-content h1 {
@@ -337,19 +345,47 @@
         font-size: 1.6em;
     }
     
+    .register-logo {
+        max-width: 100px;
+        margin-bottom: 15px;
+    }
+    
     .form-options {
         flex-direction: column;
-        gap: 15px;
+        gap: 25px;
         align-items: flex-start;
     }
     
     .info-features {
-        flex-direction: column;
+        font-size: 13px;
     }
     
     .feature {
-        flex-direction: row;
-        text-align: right;
+        flex-direction: column;
+        text-align: center;
         gap: 15px;
+    }
+    
+    .info-description {
+        text-align: center;
+    }
+}
+
+/* للأجهزة الصغيرة جداً */
+@media (max-width: 400px) {
+    .register-logo {
+        max-width: 80px;
+    }
+    
+    .register-info h2 {
+        font-size: 1.4em;
+    }
+    
+    .info-subtitle {
+        font-size: 1em;
+    }
+    
+    .info-description {
+        font-size: 0.9em;
     }
 }

@@ -106,42 +106,18 @@
   font-size: 0.9em; /* تصغير حجم الخط */
 }
 
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: var(--text-dark);
+ .checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-dark);
+    gap: 5px;
 }
 
-.checkbox-container input {
-  display: none;
-}
+.checkbox-container input{
+    width: 18px;
+    height: 18px;
 
-.checkmark {
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--divider);
-  border-radius: 4px;
-  margin-left: 6px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.checkbox-container input:checked ~ .checkmark {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.checkbox-container input:checked ~ .checkmark:after {
-  content: '';
-  position: absolute;
-  left: 5px;
-  top: 1px;
-  width: 4px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
 }
 
 .forgot-password {
@@ -321,7 +297,7 @@
   }
   .login-right {
     padding: 30px 20px;
-    height: px;
+  
   }
   .login-content h1 {
     font-size: 2em;

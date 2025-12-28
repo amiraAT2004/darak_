@@ -13,10 +13,6 @@
   padding: 0 20px;
 }
 
-/* منع التكسير/السكرول الأفقي في الصفحة */
-html, body {
-  overflow-x: hidden;
-}
 
 /* =========================
    Breadcrumb
@@ -140,11 +136,11 @@ html, body {
 }
 
 /* overlay موجود في HTML حتى لو فاضي */
-.image-overlay {
+/* .image-overlay {
   position: absolute;
   bottom: 20px;
   left: 20px;
-}
+} */
 
 .price-action-section {
   padding: 25px;
@@ -249,44 +245,6 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* =========================
-   Thumbnail Gallery
-   ========================= */
-.thumbnail-gallery {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
-}
-
-.thumbnail {
-  width: 100px;
-  height: 80px;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  border: 3px solid transparent;
-  transition: all 0.3s ease;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-}
-
-.thumbnail.active {
-  border-color: var(--accent-color);
-}
-
-.thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.thumbnail:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* =========================
    Shared Card Title Style
@@ -830,11 +788,7 @@ html, body {
     padding: 12px;
   }
 
-  /* المصغرات */
-  .thumbnail {
-    width: 85px;
-    height: 68px;
-  }
+  
 
   /* الخريطة */
   .map-container {

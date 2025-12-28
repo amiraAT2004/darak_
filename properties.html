@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>العقارات - دارك | نظام إدارة وعرض المساكن في طرابلس</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="properties.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="properties.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- الهيدر -->
     <header class="main-header">
-           <div class="brand-wrap">
-            <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-            <a href="Index.Html" class="logo">
-                <img src="Image/logoDarak-01.png" alt="شعار دارك" class="header-logo">
-            </a>
-        </div>
-        <nav class="nav-links">
-            <a href="Index.Html">الرئيسية</a>
-            <a href="properties.html">العقارات</a>
-            <a href="add-property.html" class="active">إضافة عقار</a>
+      <div class="brand-wrap">
+        <button
+          class="nav-toggle"
+          aria-label="فتح القائمة"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="Index.Html" class="logo">
+          <img
+            src="Image/logoDarak-01.png"
+            alt="شعار دارك"
+            class="header-logo"
+          />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="Index.Html">الرئيسية</a>
+        <a href="properties.html">العقارات</a>
+        <a href="add-property.html" class="active">إضافة عقار</a>
         <a
           class="contact-btn"
           href="https://wa.me/218919842342?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%D8%AD%D9%88%D9%84%20%D9%85%D9%86%D8%B5%D8%A9%20%D8%AF%D8%A7%D8%B1%D9%83"
@@ -33,309 +46,349 @@
           rel="noopener"
         >
           اتصل بنا (واتساب)
-        </a>      </nav>
-        <div class="auth-buttons">
-            <a href="signIn.html" class="btn btn-primary">تسجيل جديد</a>
-            <a href="login.html" class="btn btn-primary">تسجيل دخول</a>
-        </div>
+        </a>
+      </nav>
+      <div class="auth-buttons">
+        <a href="signIn.html" class="btn btn-primary">تسجيل جديد</a>
+        <a href="login.html" class="btn btn-primary">تسجيل دخول</a>
+      </div>
     </header>
 
     <!-- القسم الرئيسي -->
     <main class="properties-main">
-        <!-- قسم البحث المتقدم -->
-        <section class="advanced-search-section">
-            <div class="container">
-                <h1 class="page-title">ابحث عن العقار المناسب</h1>
-                <p class="page-subtitle">استخدم فلاتر البحث المتقدمة للعثور على العقار الذي يناسب احتياجاتك</p>
-                
-<form id="advancedSearchForm" class="advanced-search-form">
-                    <div class="search-filters">
-                        <div class="filter-group">
-                            <label for="property-type"><i class="fas fa-home"></i> نوع العقار</label>
-                            <select id="property-type" class="filter-select">
-                                <option value="">جميع الأنواع</option>
-                                <option value="شقة">شقة</option>
-                                <option value="فيلا">فيلا</option>
-                                <option value="مكتب">مكتب</option>
-                                <option value="أرض">أرض</option>
-                                <option value="متجر">متجر</option>
-                            </select>
-                        </div>
-                        
-                       
-                        <div class="filter-group">
-                            <label for="location"><i class="fas fa-map-marker-alt"></i> المنطقة</label>
-                            <select id="location" class="filter-select">
-                                <option value="">جميع المناطق</option>
-                                <option value="حي الأندلس">حي الأندلس</option>
-                                <option value="وسط المدينة">وسط المدينة</option>
-                                <option value="طريق المطار">طريق المطار</option>
-                                <option value="حي النصر">حي النصر</option>
-                                <option value="حي الزهور">حي الزهور</option>
-                                <option value="حي الفتح">حي الفتح</option>
-                            </select>
-                        </div>
-                        
-                        <div class="filter-group">
-                            <label for="price-range"><i class="fas fa-tags"></i> نطاق السعر</label>
-                            <select id="price-range" class="filter-select">
-                                <option value="">جميع الأسعار</option>
-                                <option value="0-1000">أقل من 1,000 د.ل</option>
-                                <option value="1000-2000">1,000 - 2,000 د.ل</option>
-                                <option value="2000-3500">2,000 - 3,500 د.ل</option>
-                                <option value="3500-5000">3,500 - 5,000 د.ل</option>
-                                <option value="5000+">أكثر من 5,000 د.ل</option>
-                            </select>
-                        </div>
-                        
-                        <div class="filter-group">
-                            <label for="bedrooms"><i class="fas fa-bed"></i> عدد الغرف</label>
-                            <select id="bedrooms" class="filter-select">
-                                <option value="">أي عدد</option>
-                                <option value="1">1 غرفة</option>
-                                <option value="2">2 غرف</option>
-                                <option value="3">3 غرف</option>
-                                <option value="4">4 غرف</option>
-                                <option value="5+">5 غرف أو أكثر</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="search-actions">
-                        <button type="submit" class="btn btn-primary btn-large">
-                            <i class="fas fa-search"></i> بحث متقدم
-                        </button>
-                        <button type="reset" class="btn btn-accent">
-                            <i class="fas fa-redo"></i> إعادة تعيين
-                        </button>
-                    </div>
-                </form>
+      <!-- قسم البحث المتقدم -->
+      <section class="advanced-search-section">
+        <div class="container">
+          <h1 class="page-title">ابحث عن العقار المناسب</h1>
+          <p class="page-subtitle">
+            استخدم فلاتر البحث المتقدمة للعثور على العقار الذي يناسب احتياجاتك
+          </p>
+
+          <form id="advancedSearchForm" class="advanced-search-form">
+            <div class="search-filters">
+              <div class="filter-group">
+                <label for="property-type"
+                  ><i class="fas fa-home"></i> نوع العقار</label
+                >
+                <select id="property-type" class="filter-select">
+                  <option value="">جميع الأنواع</option>
+                  <option value="شقة">شقة</option>
+                  <option value="فيلا">فيلا</option>
+                  <option value="مكتب">مكتب</option>
+                  <option value="أرض">أرض</option>
+                  <option value="متجر">متجر</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="location"
+                  ><i class="fas fa-map-marker-alt"></i> المنطقة</label
+                >
+                <select id="location" class="filter-select">
+                  <option value="">جميع المناطق</option>
+                  <option value="حي الأندلس">حي الأندلس</option>
+                  <option value="وسط المدينة">وسط المدينة</option>
+                  <option value="طريق المطار">طريق المطار</option>
+                  <option value="حي النصر">حي النصر</option>
+                  <option value="حي الزهور">حي الزهور</option>
+                  <option value="حي الفتح">حي الفتح</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="price-range"
+                  ><i class="fas fa-tags"></i> نطاق السعر</label
+                >
+                <select id="price-range" class="filter-select">
+                  <option value="">جميع الأسعار</option>
+                  <option value="0-1000">أقل من 1,000 د.ل</option>
+                  <option value="1000-2000">1,000 - 2,000 د.ل</option>
+                  <option value="2000-3500">2,000 - 3,500 د.ل</option>
+                  <option value="3500-5000">3,500 - 5,000 د.ل</option>
+                  <option value="5000+">أكثر من 5,000 د.ل</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="bedrooms"
+                  ><i class="fas fa-bed"></i> عدد الغرف</label
+                >
+                <select id="bedrooms" class="filter-select">
+                  <option value="">أي عدد</option>
+                  <option value="1">1 غرفة</option>
+                  <option value="2">2 غرف</option>
+                  <option value="3">3 غرف</option>
+                  <option value="4">4 غرف</option>
+                  <option value="5+">5 غرف أو أكثر</option>
+                </select>
+              </div>
             </div>
-        </section>
 
-        <!-- قسم نتائج البحث -->
-        <section class="properties-results" id="properties">
-            <div class="container">
-                <div class="results-header">
-                    <h2>عقارات متاحة</h2>
-                    <div class="results-count">
-<span>عرض <strong id="shownCount">0</strong> من <strong id="totalCount">0</strong> عقار</span>
-                        <div class="sort-by">
-                            <label for="sort">ترتيب حسب:</label>
-                            <select id="sort" class="sort-select">
-                                <option value="newest">الأحدث أولاً</option>
-                                <option value="price-low">السعر: من الأقل للأعلى</option>
-                                <option value="price-high">السعر: من الأعلى للأقل</option>
-                                <option value="popular">الأكثر مشاهدة</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="properties-grid">
-                    <!-- العقار 1 -->
-                    <article class="property-card" data-type="شقة"
-  data-location="حي الأندلس"
-  data-price="2500"
-  data-bedrooms="3">
-<article class="property-card"
-  data-type="شقة"
-  data-location="حي الأندلس"
-  data-price="2500"
-  data-bedrooms="3">
-  
-</article>
-
-                        
-                        <div class="property-image">
-                            <img src="Image/flat1.jpg" alt="شقة فاخرة في حي الأندلس">
-                            <div class="property-type">شقة</div>
-                        </div>
-                        <div class="property-info">
-                            <h3 class="property-title">شقة فاخرة للإيجار - حي الأندلس</h3>
-                            <p class="property-location">
-                                <i class="fas fa-map-marker-alt"></i> حي الأندلس، طرابلس
-                            </p>
-                            <div class="property-features">
-                                <span><i class="fas fa-ruler-combined"></i> 150 م²</span>
-                                <span><i class="fas fa-bed"></i> 3 غرف</span>
-                                <span><i class="fas fa-bath"></i> 2 حمام</span>
-                                <span><i class="fas fa-car"></i> موقف</span>
-                            </div>
-                            <div class="property-description">
-                                شقة أنيقة ومفروشة بالكامل، تشطيب سوبر لوكس، في موقع مميز قريب من الخدمات والمرافق.
-                            </div>
-                            <div class="property-footer">
-                                <div class="property-price">
-                                    <span class="price-value">2,500 د.ل</span>
-                                    <span class="price-period">/ شهرياً</span>
-                                </div>
-                                <a href="property-details.html" class="btn btn-primary btn-small">عرض التفاصيل</a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- العقار 2 -->
-                    <article class="property-card" data-type="فيلا"
-  data-location="طريق المطار"
-  data-price="2500"
-  data-bedrooms="5">
-                       
-
-                        
-                        <div class="property-image">
-                            <img src="Image/house1.jpg" alt="فيلا حديثة للإيجار">
-                            <div class="property-type">فيلا</div>
-                        </div>
-                        <div class="property-info">
-                            <h3 class="property-title">فيلا حديثة للإيجار - طريق المطار</h3>
-                            <p class="property-location">
-                                <i class="fas fa-map-marker-alt"></i> طريق المطار، طرابلس
-                            </p>
-                            <div class="property-features">
-                                <span><i class="fas fa-ruler-combined"></i> 300 م²</span>
-                                <span><i class="fas fa-bed"></i> 5 غرف</span>
-                                <span><i class="fas fa-bath"></i> 3 حمام</span>
-                                <span><i class="fas fa-tree"></i> حديقة</span>
-                            </div>
-                            <div class="property-description">
-                                فيلا فاخرة على طريق المطار، تتكون من دورين، تحتوي على حديقة خاصة ومواقف سيارات متعددة.
-                            </div>
-                            <div class="property-footer">
-                                <div class="property-price">
-                                    <span class="price-value">2,500 د.ل</span>
-                                    <span class="price-period">/ شهرياً</span>
-                                </div>
-                                <a href="property-detailsSecond.html" class="btn btn-primary btn-small">عرض التفاصيل</a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- العقار 3 -->
-                    <article class="property-card" data-type="مكتب"
-  data-location="وسط المدينة"
-  data-price="1800"
-  data-bedrooms="2">
-                        
-                     
-                        <div class="property-image">
-                            <img src="Image/OFFIC1.jpg" alt="مكتب إداري للإيجار">
-                            <div class="property-type">مكتب</div>
-                        </div>
-                        <div class="property-info">
-                            <h3 class="property-title">مكتب إداري للإيجار - وسط المدينة</h3>
-                            <p class="property-location">
-                                <i class="fas fa-map-marker-alt"></i> وسط المدينة، طرابلس
-                            </p>
-                            <div class="property-features">
-                                <span><i class="fas fa-ruler-combined"></i> 80 م²</span>
-                                <span><i class="fas fa-building"></i> طابقين</span>
-                                <span><i class="fas fa-wifi"></i> انترنت</span>
-                                <span><i class="fas fa-car"></i> موقف</span>
-                            </div>
-                            <div class="property-description">
-                                مكتب إداري فاخر في وسط المدينة، مجهز بالكامل، مناسب للشركات والمؤسسات، مع إطلالة رائعة.
-                            </div>
-                            <div class="property-footer">
-                                <div class="property-price">
-                                    <span class="price-value">1,800 د.ل</span>
-                                    <span class="price-period">/ شهرياً</span>
-                                </div>
-                                <a href="property-detailsTherd.html" class="btn btn-primary btn-small">عرض التفاصيل</a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                </div>
-                
-                <!-- ترقيم الصفحات -->
-                <div class="pagination">
-                    <a href="#" class="page-nav disabled"><i class="fas fa-arrow-right"></i> السابق</a>
-                    <div class="page-numbers">
-                        <a href="#" class="page-number active">1</a>
-                        <a href="#" class="page-number">2</a>
-                        <a href="#" class="page-number">3</a>
-                        <a href="#" class="page-number">4</a>
-                        <span class="page-dots">...</span>
-                        <a href="#" class="page-number">8</a>
-                    </div>
-                    <a href="#" class="page-nav">التالي <i class="fas fa-arrow-left"></i></a>
-                </div>
+            <div class="search-actions">
+              <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-search"></i> بحث متقدم
+              </button>
+              <button type="reset" class="btn btn-accent">
+                <i class="fas fa-redo"></i> إعادة تعيين
+              </button>
             </div>
-        </section>
+          </form>
+        </div>
+      </section>
 
-        <!-- قسم الإحصائيات -->
-        <section class="statistics-section">
-            <div class="container">
-                <h2>دارك في أرقام</h2>
-                <p class="section-subtitle">نحن نربط بين الملاك والمستأجرين في طرابلس منذ 2023</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <i class="fas fa-home"></i>
-                        <div class="stat-number">1,250+</div>
-                        <div class="stat-label">عقار معروض</div>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-users"></i>
-                        <div class="stat-number">850+</div>
-                        <div class="stat-label">مستخدم مسجل</div>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-handshake"></i>
-                        <div class="stat-number">620+</div>
-                        <div class="stat-label">صفقة مكتملة</div>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-star"></i>
-                        <div class="stat-number">4.8</div>
-                        <div class="stat-label">تقييم المستخدمين</div>
-                    </div>
-                </div>
+      <!-- قسم نتائج البحث -->
+      <section class="properties-results" id="properties">
+        <div class="container">
+          <div class="results-header">
+            <h2>عقارات متاحة</h2>
+            <div class="results-count">
+              <span
+                >عرض <strong id="shownCount">0</strong> من
+                <strong id="totalCount">0</strong> عقار</span
+              >
+              <div class="sort-by">
+                <label for="sort">ترتيب حسب:</label>
+                <select id="sort" class="sort-select">
+                  <option value="newest">الأحدث أولاً</option>
+                  <option value="price-low">السعر: من الأقل للأعلى</option>
+                  <option value="price-high">السعر: من الأعلى للأقل</option>
+                  <option value="popular">الأكثر مشاهدة</option>
+                </select>
+              </div>
             </div>
-        </section>
+          </div>
+
+          <div class="properties-grid">
+            <!-- العقار 1 -->
+            <article
+              class="property-card"
+              data-type="شقة"
+              data-location="حي الأندلس"
+              data-price="2500"
+              data-bedrooms="3"
+            >
+              <article
+                class="property-card"
+                data-type="شقة"
+                data-location="حي الأندلس"
+                data-price="2500"
+                data-bedrooms="3"
+              ></article>
+
+              <div class="property-image">
+                <img src="Image/flat1.jpg" alt="شقة فاخرة في حي الأندلس" />
+                <div class="property-type">شقة</div>
+              </div>
+              <div class="property-info">
+                <h3 class="property-title">شقة فاخرة للإيجار - حي الأندلس</h3>
+                <p class="property-location">
+                  <i class="fas fa-map-marker-alt"></i> حي الأندلس، طرابلس
+                </p>
+                <div class="property-features">
+                  <span><i class="fas fa-ruler-combined"></i> 150 م²</span>
+                  <span><i class="fas fa-bed"></i> 3 غرف</span>
+                  <span><i class="fas fa-bath"></i> 2 حمام</span>
+                  <span><i class="fas fa-car"></i> موقف</span>
+                </div>
+                <div class="property-description">
+                  شقة أنيقة ومفروشة بالكامل، تشطيب سوبر لوكس، في موقع مميز قريب
+                  من الخدمات والمرافق.
+                </div>
+                <div class="property-footer">
+                  <div class="property-price">
+                    <span class="price-value">2,500 د.ل</span>
+                    <span class="price-period">/ شهرياً</span>
+                  </div>
+                  <a
+                    href="property-details.html"
+                    class="btn btn-primary btn-small"
+                    >عرض التفاصيل</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- العقار 2 -->
+            <article
+              class="property-card"
+              data-type="فيلا"
+              data-location="طريق المطار"
+              data-price="2500"
+              data-bedrooms="5"
+            >
+              <div class="property-image">
+                <img src="Image/house1.jpg" alt="فيلا حديثة للإيجار" />
+                <div class="property-type">فيلا</div>
+              </div>
+              <div class="property-info">
+                <h3 class="property-title">فيلا حديثة للإيجار - طريق المطار</h3>
+                <p class="property-location">
+                  <i class="fas fa-map-marker-alt"></i> طريق المطار، طرابلس
+                </p>
+                <div class="property-features">
+                  <span><i class="fas fa-ruler-combined"></i> 300 م²</span>
+                  <span><i class="fas fa-bed"></i> 5 غرف</span>
+                  <span><i class="fas fa-bath"></i> 3 حمام</span>
+                  <span><i class="fas fa-tree"></i> حديقة</span>
+                </div>
+                <div class="property-description">
+                  فيلا فاخرة على طريق المطار، تتكون من دورين، تحتوي على حديقة
+                  خاصة ومواقف سيارات متعددة.
+                </div>
+                <div class="property-footer">
+                  <div class="property-price">
+                    <span class="price-value">2,500 د.ل</span>
+                    <span class="price-period">/ شهرياً</span>
+                  </div>
+                  <a
+                    href="property-detailsSecond.html"
+                    class="btn btn-primary btn-small"
+                    >عرض التفاصيل</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- العقار 3 -->
+            <article
+              class="property-card"
+              data-type="مكتب"
+              data-location="وسط المدينة"
+              data-price="1800"
+              data-bedrooms="2"
+            >
+              <div class="property-image">
+                <img src="Image/OFFIC1.jpg" alt="مكتب إداري للإيجار" />
+                <div class="property-type">مكتب</div>
+              </div>
+              <div class="property-info">
+                <h3 class="property-title">مكتب إداري للإيجار - وسط المدينة</h3>
+                <p class="property-location">
+                  <i class="fas fa-map-marker-alt"></i> وسط المدينة، طرابلس
+                </p>
+                <div class="property-features">
+                  <span><i class="fas fa-ruler-combined"></i> 80 م²</span>
+                  <span><i class="fas fa-building"></i> طابقين</span>
+                  <span><i class="fas fa-wifi"></i> انترنت</span>
+                  <span><i class="fas fa-car"></i> موقف</span>
+                </div>
+                <div class="property-description">
+                  مكتب إداري فاخر في وسط المدينة، مجهز بالكامل، مناسب للشركات
+                  والمؤسسات، مع إطلالة رائعة.
+                </div>
+                <div class="property-footer">
+                  <div class="property-price">
+                    <span class="price-value">1,800 د.ل</span>
+                    <span class="price-period">/ شهرياً</span>
+                  </div>
+                  <a
+                    href="property-detailsTherd.html"
+                    class="btn btn-primary btn-small"
+                    >عرض التفاصيل</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ترقيم الصفحات -->
+          <div class="pagination">
+            <a href="#" class="page-nav disabled"
+              ><i class="fas fa-arrow-right"></i> السابق</a
+            >
+            <div class="page-numbers">
+              <a href="#" class="page-number active">1</a>
+              <a href="#" class="page-number">2</a>
+              <a href="#" class="page-number">3</a>
+              <a href="#" class="page-number">4</a>
+              <span class="page-dots">...</span>
+              <a href="#" class="page-number">8</a>
+            </div>
+            <a href="#" class="page-nav"
+              >التالي <i class="fas fa-arrow-left"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- قسم الإحصائيات -->
+      <section class="statistics-section">
+        <div class="container">
+          <h2>دارك في أرقام</h2>
+          <p class="section-subtitle">
+            نحن نربط بين الملاك والمستأجرين في طرابلس منذ 2025
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <i class="fas fa-home"></i>
+              <div class="stat-number">1,250+</div>
+              <div class="stat-label">عقار معروض</div>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-users"></i>
+              <div class="stat-number">850+</div>
+              <div class="stat-label">مستخدم مسجل</div>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-handshake"></i>
+              <div class="stat-number">620+</div>
+              <div class="stat-label">صفقة مكتملة</div>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-star"></i>
+              <div class="stat-number">4.8</div>
+              <div class="stat-label">تقييم المستخدمين</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- الفوتر -->
     <footer class="main-footer" id="contact">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>دارك</h3>
-                <p>منصة عقارية رائدة في طرابلس، نسهل عملية البحث والتأجير والبيع.</p>
-            </div>
-            <div class="footer-col">
-                <h3>روابط سريعة</h3>
-                <ul>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>دارك</h3>
+          <p>منصة عقارية رائدة في طرابلس، نسهل عملية البحث والتأجير والبيع.</p>
+        </div>
+        <div class="footer-col">
+          <h3>روابط سريعة</h3>
+          <ul>
             <a href="Index.Html">الرئيسية</a>
             <a href="properties.html">العقارات</a>
             <a href="add-property.html" class="active">إضافة عقار</a>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>اتصل بنا</h3>
-                <p><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا</p>
-                <p><i class="fas fa-phone"></i> +218 91 234 5678</p>
-                <p><i class="fas fa-envelope"></i> info@darak.ly</p>
-            </div>
-            <div class="footer-col">
-                <h3>تابعنا</h3>
-                <p>
-                                       <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://x.com/?lang=ar" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                </p>
-            </div>
+          </ul>
         </div>
-        <div class="footer-bottom">
-                  <p>© 2025 دارك. جميع الحقوق محفوظة.</p>
+        <div class="footer-col">
+          <h3>اتصل بنا</h3>
+          <p><i class="fas fa-map-marker-alt"></i> طرابلس، ليبيا</p>
+          <p><i class="fas fa-phone"></i> +218 91 234 5678</p>
+          <p><i class="fas fa-envelope"></i> info@darak.ly</p>
+        </div>
+        <div class="footer-col">
+          <h3>تابعنا</h3>
+          <p>
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://x.com/?lang=ar" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 دارك. جميع الحقوق محفوظة.</p>
         <p>
           عمل الطالبات: أميرة عبد السلام التائب _ ألاء امحمد مريود _ زينب علي
           الشيخ
         </p>
-        </div>
+      </div>
     </footer>
-    <script src="properties-filter.js"></script>
     <script src="java.js"></script>
-
-</body>
+  </body>
 </html>
